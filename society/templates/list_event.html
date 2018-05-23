@@ -1,0 +1,173 @@
+﻿{%extends 'skeleton.html'%}
+{%load static%}
+{%block body%}
+
+<body class="ecommerce-page">
+    {%include 'nav.html'%}
+
+    <div class="wrapper">
+       <div class="page-header page-header-extra-small"></div>
+       <!-- <div id="carouselExampleIndicators" class="carousel slide">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class=""></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2" class=""></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item">
+                    <div class="page-header header-filter">
+                        <div class="page-header-image" style="background-image: url('../assets/img/bg40.jpg');"></div>
+                        <div class="content-center text-center">
+                            <div class="row">
+                                <div class="col-md-8 ml-auto mr-auto2">
+                                    <h1 class="title">Finding the Perfect.</h1>
+                                    <h4 class="description text-white">The haute couture crowds make stylish statements between shows during couture season in Paris...</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item active">
+                    <div class="page-header header-filter">
+                        <div class="page-header-image" style="background-image: url('../assets/img/bg41.jpg');"></div>
+                        <div class="content-center">
+                            <div class="row">
+                                <div class="col-md-8 ml-auto mr-auto text-center">
+                                    <h1 class="title">Street Style: Couture.</h1>
+                                    <h4 class="description text-white">See what Karlie Kloss, Tracee Ellis Ross and others wore between the shows...</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="page-header header-filter">
+                        <div class="page-header-image" style="background-image: url('../assets/img/bg29.jpg');"></div>
+                        <div class="content-center text-center">
+                            <div class="row">
+                                <div class="col-md-8 ml-auto mr-auto">
+                                    <h1 class="title">For Men With Style.</h1>
+                                    <h4 class="description text-white">Shirts that actually fit? Check. Linen shorts? Yup. Those wider pants suddenly in style? Got them, too....</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <i class="now-ui-icons arrows-1_minimal-left"></i>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <i class="now-ui-icons arrows-1_minimal-right"></i>
+            </a>
+        </div>-->
+        <div class="main">
+            
+            <div class="section">
+                <div class="container">
+                    <h2 class="section-title">Societies</h2>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h4 class="card-title">
+                                            Order By
+                                            <button class="btn btn-default btn-icon btn-neutral pull-right" rel="tooltip" title="Reset Filter">
+                                                <i class="arrows-1_refresh-69 now-ui-icons"></i>
+                                            </button>
+                              </h4>
+                                </div>
+                                <!--<div class="col-md-12">
+                                    <p class="card-title">
+                                        <a href="/society/societies/?ctg=tech">Tech</a>
+                                    </p>
+                                </div>
+                                <div class="col-md-12">
+                                    <p class="card-title">
+                                        <a href="/society/societies/?ctg=sports">Sports</a>
+                                    </p>
+                                </div>
+                                <div class="col-md-12">
+                                    <p class="card-title">
+                                        <a href="/society/societies/?ctg=academic">Academic</a>
+                                    </p>
+                                </div>
+                                <div class="col-md-12">
+                                    <p class="card-title">
+                                        <a href="/society/societies/?ctg=blog">Blog, News, Media</a>
+                                    </p>
+                                </div>
+                                <div class="col-md-12">
+                                    <p class="card-title">
+                                        <a href="/society/societies/?ctg=arts">Arts</a>
+                                    </p>
+                                </div>
+                                <div class="col-md-12">
+                                    <p class="card-title">
+                                        <a href="/society/societies/?ctg=social">Social</a>
+                                    </p>
+                                </div>
+                                <div class="col-md-12">
+                                    <p class="card-title">
+                                        <a href="/society/societies/?ctg=entrepreneur">Entrepreneurship</a>
+                                    </p>
+                                </div>-->
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                           {%for o in list%}
+                             <div class="row">
+                                <div class="col-lg-12 col-md-12">
+                                   
+                                    <div class="card card-product card-avatar">
+                                        <div class="row">
+                                     <!--       <div class="col-sm-4">
+                                                <div class="card-image">
+                                                     <a href="/society/{{s.url_extension}}">
+                                                         <img src="{{s.logo.url}}" alt="..." class="rounded-circle img-raised" style="height: 150px; width:auto" />
+                                                     </a>
+                                                </div>
+                                        
+                                            </div>-->
+                                            <div class="col-sm-12">
+                                                <div class="card-body">
+                                            <a href="/event/?eid={{o.e.event_id}}">
+                                                <h4 class="card-title">{{o.e.name}}</h4>
+                                            </a>
+                                            <p class="card-description">
+                                                To be held on {{o.e.date}} and organised by {{o.s.name}} society of {{o.s.college}} college.
+                                            </p>
+                                            
+                                        </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer">
+                                                
+                                                <a class="btn btn-primary btn-round pull-right" rel="tooltip" title="Visit" data-placement="left" href="/event/?eid={{o.e.event_id}}">
+                                                   Visit Page
+                                                </a>
+                                            </div>
+                                    </div>
+                                        
+                                    <!-- end card -->
+                                </div>
+                               
+                                
+                            </div>
+                           {%endfor%}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- section -->
+            
+        </div>
+        <!-- end-main-raised -->
+        <footer class="footer ">
+            {%include 'footer.html'%}
+        </footer>
+    </div>
+
+</body>
+
+{%endblock%}

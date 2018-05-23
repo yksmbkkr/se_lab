@@ -1,0 +1,203 @@
+﻿{%extends 'skeleton.html'%}
+{%load static%}
+{%block body%}
+
+<body class="profile-page">
+    {%include 'nav.html'%}
+    <div class="wrapper">
+        <div class="page-header page-header-small" filter-color="orange">
+            <div class="page-header-image" data-parallax="true" style="background-image: url({%static 'gen/assets/img/bg5.jpg'%}) ;">
+            </div>
+            <div class="content-center">
+                <div class="photo-container">
+                    <img src="{{soc.logo.url}}" alt="">
+                </div>
+                <h3 class="title">{{soc.name}}</h3>
+                <p class="category">{{soc.category}}</p>
+              <!--  <div class="content">
+                    <div class="social-description">
+                        <h2>26</h2>
+                        <p>Comments</p>
+                    </div>
+                    <div class="social-description">
+                        <h2>26</h2>
+                        <p>Comments</p>
+                    </div>
+                    <div class="social-description">
+                        <h2>48</h2>
+                        <p>Bookmarks</p>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+        <div class="section">
+            <div class="container">
+                <div class="button-container">
+                    <a href="#button" class="btn btn-primary btn-round btn-lg">Follow</a>
+                    <a href="#button" class="btn btn-default btn-round btn-lg btn-icon" rel="tooltip" title="Follow me on Twitter">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a href="#button" class="btn btn-default btn-round btn-lg btn-icon" rel="tooltip" title="Follow me on Instagram">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                </div>
+                <h3 class="title">Our Motto</h3>
+                <h5 class="description text-center">{{soc.motto}}</h5>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4 class="title text-center">Get to know us</h4>
+                        <div class="nav-align-center">
+                            <ul class="nav nav-pills nav-pills-primary" role="tablist">
+                               
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#who" role="tablist">
+                                        Who we are 
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#objective" role="tablist">
+                                        Our Objective
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#more" role="tablist">
+                                        Know More
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Tab panes -->
+                        <div class="tab-content gallery">
+                            
+                            <div class="tab-pane active" id="who" role="tabpanel">
+                                <div class="row">
+                                    <div class="col-md-12 ml-auto mr-auto">
+                                        <div class="card card-background card-background-product card-raised" style="background-image: url({%static 'gen/assets/img/project8.jpg'%})">
+                                            <div class="card-body">
+                                                <h2 class="card-title">Social Analytics</h2>
+                                                <p class="card-description">
+                                                    {{soc.who_you_are}}
+                                                </p>
+                                                <label class="badge badge-neutral">Analytics</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  <!--  <div class="col-md-5">
+                                        <div class="info info-horizontal">
+                                            <div class="icon icon-danger">
+                                                <i class="now-ui-icons ui-2_chat-round"></i>
+                                            </div>
+                                            <div class="description">
+                                                <h5 class="info-title">Listen to Social Conversations</h5>
+                                                <p class="description">
+                                                    Gain access to the demographics, psychographics, and location of unique people who talk about your brand.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="info info-horizontal">
+                                            <div class="icon icon-danger">
+                                                <i class="now-ui-icons design-2_ruler-pencil"></i>
+                                            </div>
+                                            <div class="description">
+                                                <h5 class="info-title">Social Conversions</h5>
+                                                <p class="description">
+                                                    Track actions taken on your website that originated from social, and understand the impact on your bottom line.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>-->
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="objective" role="tabpanel">
+                                <div class="row">
+                                    <div class="col-md-12 ml-auto mr-auto">
+                                        <div class="card card-background card-background-product card-raised" style="background-image:  url({%static 'gen/assets/img/bg25.jpg'%})">
+                                            <div class="card-body">
+                                                <h2 class="card-title">Interior Redesign</h2>
+                                                <p class="card-description">
+                                                    {{soc.objective}}
+                                                </p>
+                                                <label class="badge badge-neutral">Interior</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                   <!-- <div class="col-md-5">
+                                        <div class="info info-horizontal">
+                                            <div class="icon icon-info">
+                                                <i class="now-ui-icons design_palette"></i>
+                                            </div>
+                                            <div class="description">
+                                                <h5 class="info-title">Colors adjustments</h5>
+                                                <p class="description">
+                                                    Gain access to the demographics, psychographics, and location of unique people who talk about your brand.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="info info-horizontal">
+                                            <div class="icon icon-info">
+                                                <i class="now-ui-icons design_scissors"></i>
+                                            </div>
+                                            <div class="description">
+                                                <h5 class="info-title">Performance Clothing</h5>
+                                                <p class="description">
+                                                    Unify data from Facebook, Instagram, Twitter, LinkedIn, and Youtube to gain rich insights from easy-to-use reports.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>-->
+                                </div>
+                            </div>
+                             <div class="tab-pane" id="more" role="tabpanel">
+                                <div class="row">
+                                    <div class="col-md-12 ml-auto mr-auto">
+                                        <div class="card card-background card-background-product card-raised" style="background-image: url({%static 'gen/assets/img/project8.jpg'%})">
+                                            <div class="card-body">
+                                                <h2 class="card-title">Social Analytics</h2>
+                                                <p class="card-description">
+                                                    {{soc.about}}
+                                                </p>
+                                                <label class="badge badge-neutral">Analytics</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  <!--  <div class="col-md-5">
+                                        <div class="info info-horizontal">
+                                            <div class="icon icon-danger">
+                                                <i class="now-ui-icons ui-2_chat-round"></i>
+                                            </div>
+                                            <div class="description">
+                                                <h5 class="info-title">Listen to Social Conversations</h5>
+                                                <p class="description">
+                                                    Gain access to the demographics, psychographics, and location of unique people who talk about your brand.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="info info-horizontal">
+                                            <div class="icon icon-danger">
+                                                <i class="now-ui-icons design-2_ruler-pencil"></i>
+                                            </div>
+                                            <div class="description">
+                                                <h5 class="info-title">Social Conversions</h5>
+                                                <p class="description">
+                                                    Track actions taken on your website that originated from social, and understand the impact on your bottom line.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--     *********    CONTACT US 2     *********      -->
+        
+        <!--     *********    END CONTACT US 2      *********      -->
+        <footer class="footer footer-default ">
+           {% include 'footer.html'%}
+        </footer>
+    </div>
+</body>
+
+{% endblock %}

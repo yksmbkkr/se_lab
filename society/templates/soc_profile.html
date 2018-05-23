@@ -1,0 +1,133 @@
+﻿{%extends 'skeleton.html'%}
+{%load static%}
+{%block body%}
+
+
+<body class="template-page">
+    {%include 'nav.html'%}
+    <div class="wrapper">
+        <div class="page-header page-header-extra-small" filter-color="orange">
+            <div class="page-header-image" data-parallax="true" style="background-image: url({%static 'gen/assets/img/se.jpg'%}) ;">
+            </div>
+         
+        </div>
+        <div class="section section-image" style="background-image: url({%static 'gen/assets/img/contact1.jpg'%});">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 ml-auto mr-auto">
+                        <div class="card card-contact card-raised">
+                                <form role="form" id="contact-form" method="post">
+                                    <div class="card-header text-center">
+                                        <h4 class="card-title">Info of Event</h4>
+                                    </div>
+                                    <div class="card-body">
+                                       <div class="form-group">
+                                            <label>Name of Event</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="now-ui-icons ui-1_email-85"></i></span>
+                                                </div>
+                                               {{form.name}}
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Duration</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="now-ui-icons ui-1_email-85"></i></span>
+                                                </div>
+                                                {{form.duration}}
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Entry Fees</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="now-ui-icons ui-1_email-85"></i></span>
+                                                </div>
+                                                {{form.fees}}
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Date of Event</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="now-ui-icons ui-1_email-85"></i></span>
+                                                </div>
+                                                {{form.date}}
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Starting Time of Event</label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="now-ui-icons ui-1_email-85"></i></span>
+                                                </div>
+                                                {{form.start_time}}
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Speakers</label>
+                                            {{form.speaker}}
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Description f Event</label>
+                                            {{form.description}}
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Rules</label>
+                                            {{form.rules}}
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                               
+                                            </div>
+                                            {%csrf_token%}
+                                            <div class="col-md-6">
+                                                <button type="submit" class="btn btn-primary btn-round pull-right">Create</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <footer class="footer ">
+           {%include 'footer.html'%}
+        </footer>
+    </div>
+     {%if form.errors%}
+ <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header justify-content-center">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            <i class="now-ui-icons ui-1_simple-remove"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        
+                                         <div class="alert alert-danger" role="alert">
+                                    <div class="container">
+                                        <div class="alert-icon">
+                                            <i class="now-ui-icons objects_support-17"></i>
+                                        </div>
+                                        <ul class="errorlist">{%for field in form%}{%for error in field.errors %}<li>{{error}}</li>{%endfor%}{%endfor%}</ul>
+                                    </div>
+                                </div>
+                                
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+ </div>
+    {%endif%}
+</body>
+
+{% endblock %}

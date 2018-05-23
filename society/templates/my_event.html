@@ -1,0 +1,106 @@
+﻿{%extends 'skeleton.html'%}
+{%load static%}
+{%block body%}
+<body class="landing-page">
+    {%include 'nav.html'%}
+
+     <div class="wrapper">
+        <div class="page-header page-header-very-small">
+            <div class="page-header-image" data-parallax="true" style="background-image: url({%static 'gen/assets/img/bg26.jpg'%});">
+            </div>
+            <div class="content-center">
+                <h1 class="title">Your Events</h1>
+              
+            </div>
+        </div>
+        <div class="section section-about-us">
+            <div class="container">
+                <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6 text-center">
+                    <h3 class="title">Live Events</h3>
+                </div>
+                    </div>
+                <div class="row">
+                    {%if live_e %}
+                    {%for e in live_e %}
+                    <div class="col-md-4">
+                        <div class="card card-blog">
+                                    <div class="card-body text-center">
+                                        <h6 class="category text-danger">
+                                            <i class="now-ui-icons media-2_sound-wave"></i> Event
+                                        </h6>
+                                        <h5 class="card-title">
+                                            {{e.name}}
+                                        </h5>
+                                        <p class="card-description">
+                                            Created on {{e.creation_time}}<br />To be held on {{e.date}}
+                                        </p>
+                                        <div class="card-footer">
+                                            <a href="/event/?eid={{e.event_id}}" class="btn btn-primary">View Full Discription</a>
+                                            <a href="/society/edit_event/?eid={{e.event_id}}" class="btn btn-primary">Edit Event</a>
+                                        </div>
+                                    </div>
+                                </div>
+                    </div>
+                    {%endfor%}
+                    {%else%}
+                    <div class="col-md-12 text-center">
+                    <h4>No Live Events</h4>
+                     </div>
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4 text-center">
+                    <a class="btn btn-primary btn-block" href="/society/create_event/">Create Event</a>
+                        </div>
+                   {%endif%}
+                </div>
+                <div class="row">
+                    <div class="col-md-3"></div>
+                <div class="col-md-6 text-center">
+                    <h3 class="title">Past Events</h3>
+                </div>
+                    </div>
+                <div class="row">
+                    {%if past_e %}
+                    {%for e in past_e %}
+                    <div class="col-md-4">
+                        <div class="card card-blog">
+                                    <div class="card-body text-center">
+                                        <h6 class="category text-danger">
+                                            <i class="now-ui-icons media-2_sound-wave"></i> Event
+                                        </h6>
+                                        <h5 class="card-title">
+                                            {{e.name}}
+                                        </h5>
+                                        <p class="card-description">
+                                            Created on {{e.creation_time}}<br />Held on {{e.date}}
+                                        </p>
+                                        <div class="card-footer">
+                                            <a href="/event/?eid={{e.event_id}}" class="btn btn-primary">View Full Discription</a>
+                                        </div>
+                                    </div>
+                                </div>
+                    </div>
+                    {%endfor%}
+                    {%else%}
+                    <div class="col-md-12 text-center">
+                    <h4>No Past Events</h4>
+                     </div>
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4 text-center">
+                    <a class="btn btn-primary btn-block" href="/society/create_event/">Create Event</a>
+                        </div>
+                   {%endif%}
+                </div>
+                <div class="separator separator-primary"></div>
+              
+            </div>
+        </div>
+      
+        <footer class="footer footer-default ">
+           {% include 'footer.html'%}
+        </footer>
+    </div>
+</body>
+
+{%endblock%}

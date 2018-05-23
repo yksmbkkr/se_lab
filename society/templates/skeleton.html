@@ -1,0 +1,34 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {%include 'head.html'%}
+</head>
+
+{%block body%}
+
+<body class="signup-page">
+    <!-- Navbar -->
+    {%include 'nav.html'%}
+    <!-- End Navbar -->
+    <div class="page-header section-image">
+        <div class="page-header-image" style="background-image: url({%static 'gen/assets/img/bg18.jpg' %})"></div>
+        <div class="content-center">
+            <div class="container">
+                <p class="description">
+                    Sorry Page Not Found
+                </p>
+            </div>
+        </div>
+        <footer class="footer ">
+            {%include 'footer.html'%}
+        </footer>
+    </div>
+</body>
+
+{%endblock%}
+<!--   Core JS Files   -->
+{%include 'script.html' %}
+
+</html>

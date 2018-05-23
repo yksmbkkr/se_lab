@@ -1,0 +1,174 @@
+{%extends 'skeleton.html'%}
+{%load static%}
+{%block body%}
+
+<body class="template-page">
+    <!-- Navbar -->
+   {%include 'nav.html'%}
+    <!-- End Navbar -->
+    <div class="wrapper">
+       <div class="features-2 section-image" style="background-image: url('{%static 'gen/assets/img/bg22.jpg'%}')">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-8 mr-auto ml-auto">
+                            <h2 class="title">Create a space for your society</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-12 mr-auto ml-auto">
+                        <div class="col-md-12 ml-auto col-xl-10 mr-auto">
+                            
+                            <!-- Nav tabs -->
+                            <div class="card">
+                                <div class="card-header">
+                                    
+                                    <ul class="nav nav-tabs justify-content-center" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" data-toggle="tab" href="#intro" role="tab">
+                                                <i class="now-ui-icons objects_umbrella-13"></i> Introduction
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-toggle="tab" href="#about" role="tab">
+                                                <i class="now-ui-icons shopping_cart-simple"></i> About Society
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-toggle="tab" href="#messages" role="tab">
+                                                <i class="now-ui-icons shopping_shop"></i> Messages
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-toggle="tab" href="#settings" role="tab">
+                                                <i class="now-ui-icons ui-2_settings-90"></i> Settings
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    
+                                </div>
+                                <div class="card-body">
+                                    <!-- Tab panes -->
+                                    <div class="tab-content text-center">
+                                        <div class="tab-pane active" id="intro" role="tabpanel">
+                                            <div class="col mt-2 pt-2"> <h3 class="text-primary">Your Identity</h3></div>
+                                            <div class="row">
+                                                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                                                     <div class="fileinput fileinput-new text-center" data-provides="fileinput">
+                                                        <div class="fileinput-new thumbnail img-raised">
+                                                            <img src="{%static 'gen/assets/img/image_placeholder.jpg'%}" alt="...">
+                                                        </div>
+                                                        <div class="fileinput-preview fileinput-exists thumbnail img-raised"></div>
+                                                            <div>
+                                                                <span class="btn btn-raised btn-round btn-default btn-file">
+                                                                    <span class="fileinput-new">Select Logo</span>
+                                                                    <span class="fileinput-exists">Change</span>
+                                                                    <input type="file" name="...">
+                                                                </span>
+                                                                <a href="#pablo" class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput"><i class="now-ui-icons ui-1_simple-remove"></i> Remove</a>
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                                <div class="col-xl-8 col-lg-8 col-md-6 col-sm-12 col-12">
+                                                    <form class="form" method="" action="">
+                                                        <label class="pull-left">Name of Society</label>
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                                <span class="input-group-text">
+                                                                    <i class="now-ui-icons users_circle-08"></i>
+                                                                </span>
+                                                            </div>
+                                                            <input type="text" class="form-control" placeholder="Name of Society">
+                                                        </div>
+                                                        <label class="pull-left">College</label>
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                                <span class="input-group-text">
+                                                                    <i class="now-ui-icons users_circle-08"></i>
+                                                                </span>
+                                                            </div>
+                                                            <input type="text" class="form-control" placeholder="College">
+                                                        </div>
+                                                        <label class="pull-left">Category</label>
+                                                        <div class="input-group">
+                                                            
+                                                            <select class="selectpicker" data-size="7" data-style="btn btn-primary btn-round" title="Single Select">
+                                                                <option disabled selected>Single Option</option>
+                                                                <option value="2">Foobar</option>
+                                                                <option value="3">Is great</option>
+                                                            </select>
+                                                        </div>
+                                                         
+                                                    </form>
+                                                </div>
+                                            </div>
+                                          
+                                        </div>
+                                        <div class="tab-pane" id="about" role="tabpanel">
+                                            <div class="col mt-2 pt-2"> <h3 class="text-primary">About You</h3></div>
+                                            <div class="col">
+                                                <form class="form" method="" action="">
+                                                    <label class="pull-left">Name of Society</label>
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                                <span class="input-group-text">
+                                                                    <i class="now-ui-icons users_circle-08"></i>
+                                                                </span>
+                                                            </div>
+                                                            <input type="text" class="form-control" placeholder="Name of Society">
+                                                        </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" id="messages" role="tabpanel">
+                                            <p>I think that's a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. So when you get something that has the name Kanye West on it, it's supposed to be pushing the furthest possibilities. I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus.</p>
+                                        </div>
+                                        <div class="tab-pane" id="settings" role="tabpanel">
+                                            <p>
+                                                "I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that's a responsibility that I have, to push possibilities, to show people, this is the level that things could be at."
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="info">
+                                <div class="icon icon-primary icon-circle">
+                                    <i class="now-ui-icons users_single-02"></i>
+                                </div>
+                                <h4 class="info-title">Work With Any Team</h4>
+                                <p class="description">Whether itÃ¢â‚¬â„¢s for work or even the next family vacation, Trello helps your team.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="info">
+                                <div class="icon icon-danger icon-circle">
+                                    <i class="now-ui-icons business_chart-bar-32"></i>
+                                </div>
+                                <h4 class="info-title">A Productivity Platform</h4>
+                                <p class="description">Integrate the apps your team already uses directly into your workflow.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="info">
+                                <div class="icon icon-warning icon-circle">
+                                    <i class="now-ui-icons arrows-1_refresh-69"></i>
+                                </div>
+                                <h4 class="info-title">Always In Sync</h4>
+                                <p class="description">No matter where you are, Trello stays in sync across all of your devices.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+          
+        <footer class="footer ">
+            {%include 'footer.html'%}
+        </footer>
+    </div>
+</body>
+{%endblock%}
